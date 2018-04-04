@@ -15,7 +15,7 @@ There's no need to configure anything to run the application. Just execute this 
 <pre>
 $ cd symfony2.7-complete-setup-with-admintheme/
 $ php app/console doctrine:database:create
-$ php app/console doctrine:schema:update
+$ php app/console doctrine:schema:update --force
 $ php app/console server:run</pre>
 
 Now Open database folder and goto your phpmyadmin and import database file that present in database folder
