@@ -1,0 +1,7 @@
+{% extends 'AdminBundle:Items:layout.html.twig' %}
+ {% block list %}
+{{ include('AdminBundle:Items/list:'~itemType~'.html.twig') }}
+{% endblock list %}
+
+
+

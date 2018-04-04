@@ -1,0 +1,24 @@
+{% block popup %}
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/editors/wysihtml5/wysihtml5.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/editors/wysihtml5/toolbar.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/editors/wysihtml5/parsers.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/editors/wysihtml5/locales/bootstrap-wysihtml5.ua-UA.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/app.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/pages/editor_wysihtml5.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Add / Edit {{ itemTitle }}</h4>
+                </div><!--end modal-header-->
+    {{ form_start(itemform, { 'attr' : { 'class': 'form-horizontal',novalidate: 'novalidate' } }) }}
+    {{ form_errors(itemform) }}
+    <div class="modal-body">
+                    <div class="example-box-wrapper">
+                    {{form_widget(itemform)  }}
+                    </div><!--end example-box-wrapper-->
+                </div><!--end modal-body-->
+
+                {{ form_end(itemform) }}
+
+{% endblock %}

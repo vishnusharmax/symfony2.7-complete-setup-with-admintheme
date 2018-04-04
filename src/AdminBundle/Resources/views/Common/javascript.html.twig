@@ -1,0 +1,43 @@
+{% block javascript %}
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/loaders/pace.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/libraries/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/libraries/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/loaders/blockui.min.js')}}"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    {#<script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/visualization/d3/d3.min.js')}}"></script>#}
+    {#<script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/visualization/d3/d3_tooltip.js')}}"></script>#}
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/selects/bootstrap_multiselect.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/ui/moment/moment.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/pickers/daterangepicker.js')}}"></script>
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
+
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/app.js')}}"></script>
+    {#<script type="text/javascript" src="{{ asset('admin/material/assets/js/pages/datatables_advanced.js')}}"></script>#}
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/pages/components_modals.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/jquery.cookies.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/bootstrap-confirm-delete.js')}}"></script>
+    <script>
+        function getdata(data){
+            $.cookie('activeid', data, { expires:1, path: '/' });
+            $("#"+data).addClass('active');
+        }
+        $('#datatable-table').dataTable({
+        });
+        $('#datatable-tablestore').dataTable({
+            "scrollX": true
+        });
+        $('.delete').bootstrap_confirm_delete({
+            heading: 'Delete',
+            message: 'Are you sure you want to delete this item?',
+            data_type: null
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% block list %}
+    <body class="login-container">
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse bg-indigo">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="{{ asset('Userprofile/face11.jpg') }}" alt=""></a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Content area -->
+                <div class="content">
+
+                    <!-- Error title -->
+                    <div class="text-center content-group">
+                        <h1 class="error-title">404</h1>
+                        <h5>Oops, an error has occurred. Page not found!</h5>
+                        <p>{{ message }}</p>
+                    </div>
+                    <!-- /error title -->
+
+
+                    <!-- Error content -->
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+                            <form action="#" class="main-search panel panel-body">
+                                <div class="form-group has-feedback">
+                                    <input type="text" class="form-control input-lg" placeholder="Search...">
+                                    <div class="form-control-feedback">
+                                        <i class="icon-search4 text-size-large text-muted"></i>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <a href="#" class="btn bg-pink-400" onclick="goBack()"><i class="icon-circle-left2 position-left"></i> Back to dashboard</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /error wrapper -->
+
+
+                    <!-- Footer -->
+                    <div class="footer text-muted text-center">
+                        &copy; {{ "now"|date("Y") }}. <a href="#">Symfony</a> by <a href="#" target="_blank">VS</a>
+                    </div>
+                    <!-- /footer -->
+
+                </div>
+                <!-- /content area -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+    </body>
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    {{ include('AdminBundle:Common:stylesheet.html.twig') }}
+{% endblock %}
+
+
+{% block content %}
+    {{ include('AdminBundle:Error:body.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ include('AdminBundle:Common:javascript.html.twig') }}
+    <!--materialize js-->
+    <script type="text/javascript">
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+{% endblock %}
+
+

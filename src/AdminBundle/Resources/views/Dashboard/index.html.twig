@@ -1,0 +1,58 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ include('AdminBundle:Common:stylesheet.html.twig') }}
+
+{% endblock %}
+
+{% block topheader %}
+    {{ include('AdminBundle:Common:top-header.html.twig') }}
+{% endblock %}
+
+{% block leftmenu %}
+    {{ include('AdminBundle:Common:leftmenu.html.twig') }}
+{% endblock %}
+
+{% block content %}
+    {{ include('AdminBundle:Dashboard:body.html.twig') }}
+{% endblock %}
+
+{% block footer %}
+
+    {{ include('AdminBundle:Common:footer.html.twig') }}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/loaders/pace.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/libraries/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/libraries/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/loaders/blockui.min.js')}}"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    {#<script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/visualization/d3/d3.min.js')}}"></script>#}
+    {#<script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/visualization/d3/d3_tooltip.js')}}"></script>#}
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/styling/switchery.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/forms/selects/bootstrap_multiselect.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/ui/moment/moment.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/pickers/daterangepicker.js')}}"></script>
+    <!-- Theme JS files -->
+
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/core/app.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('admin/material/assets/js/pages/dashboard.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/pages/components_modals.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('admin/material/assets/js/jquery.cookies.js')}}"></script>
+    <script>
+        function getdata(data){
+            $.cookie('activeid', data, { expires:1, path: '/' });
+            $("#"+data).addClass('active');
+        }
+    </script>
+{% endblock %}
+
+

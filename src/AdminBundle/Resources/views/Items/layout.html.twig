@@ -1,0 +1,78 @@
+{% block content %}
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span
+                                class="text-semibold">{{ itemTitle }}</span></h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line breadcrumb-line-component">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('show_dashboard',{'itemType':'Dashboard'}) }}"><i
+                                    class="icon-home2 position-left"></i> Home</a></li>
+                    <li class="active"><a href="{{ path('admin_item_list',{'itemType':itemType}) }}">{{ itemTitle }}</a>
+                    </li>
+                </ul>
+                <ul class="breadcrumb-elements">
+                        <li><a href="{{ path('admin_item_details',{'itemType': itemType, 'id':'-9999'}) }}"
+                               data-target="#myModal" data-toggle="modal"><i
+                                        class=" icon-plus-circle2 position-left"></i>Add {{ itemTitle }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+
+        <!-- Content area -->
+        <div class="content">
+
+            <!-- Page length options -->
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <h5 class="panel-title"></h5>
+                    <div class="heading-elements">
+                        <ul class="icons-list">
+                            <li><a data-action="collapse"></a></li>
+                            <li><a data-action="reload"></a></li>
+                            <li><a data-action="close"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                </div>
+                {% for type, flash_messages in app.session.flashBag.all %}
+                    {% for flash_message in flash_messages %}
+                        {% if type=='Exit' %}
+                            <div class="alert alert-close alert alert-notice" id="custommsg">
+                                <a href="#" title="Close" class="glyph-icon alert-close-btn icon-remove"></a>
+                                <div class="bg-green alert-icon">
+                                    <i class="glyph-icon icon-check"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <h4 class="alert-title">Notice</h4>
+                                    <p>{{ flash_message }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                {% block list %}{% endblock list %}
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated bounceInRight">
+                {% block popup %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

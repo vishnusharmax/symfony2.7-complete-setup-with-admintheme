@@ -1,0 +1,90 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ include('AdminBundle:Common:stylesheet.html.twig') }}
+{% endblock %}
+
+{% block topheader %}
+    {{ include('AdminBundle:Common:top-header.html.twig') }}
+{% endblock %}
+
+{% block leftmenu %}
+    {{ include('AdminBundle:Common:leftmenu.html.twig') }}
+{% endblock %}
+
+{% block content %}
+    {{ include('AdminBundle:Items:body.html.twig') }}
+{% endblock %}
+
+{% block footer %}
+
+    {{ include('AdminBundle:Common:footer.html.twig') }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ include('AdminBundle:Common:javascript.html.twig') }}
+    <script>
+        function confirm_delete() {
+            return confirm('are you sure?');
+        }
+        $(document).ready(function () {
+
+            var target = $(this).attr("href");
+
+            // load the url and show modal on success
+            $("a[data-target=#myModal]").click(function (ev) {
+                ev.preventDefault();
+                var target = $(this).attr("href");
+                // load the url and show modal on success
+                $("#myModal .modal-content").load(target, function () {
+                    $("#myModal").modal("show");
+                    $('#textarea').wysihtml5();
+
+                });
+            });
+            $('#myModal').on('hidden.bs.modal', function (ev) {
+                ev.preventDefault();
+                $("#myModal .modal-body").html('');
+                $("#myModal .modal-header").hide();
+                $("#myModal .modal-footer").hide();
+                $("#myModal").modal("hide");
+                // load the url and show modal on success
+
+
+
+            });
+        });
+        $('#custommsg').delay(3000).fadeOut();
+
+
+        $(document).on('change','#yourid', function () {
+            var value=$('#yourid option:selected').val();
+            if(value) {
+                $.ajax({
+                    url: '{{ baseurl }}masterjson?mastername=Subcategory&findid=catid',
+                    type: 'GET',
+                    data: 'masterid=' + value,
+                    success: function (data) {
+                        var $selectDropdown =
+                            $("#youridappendid")
+                                .empty()
+                                .html(' ');
+
+                        $.each(data.commandResult.data.masters, function (key, value) {
+                            var id = value.Id;
+                            var name = value.Name;
+                            $selectDropdown.append(
+                                $("<option></option>")
+                                    .attr("value", id)
+                                    .text(name)
+                            );
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+{% endblock %}
+
+

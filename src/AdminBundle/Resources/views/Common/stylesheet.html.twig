@@ -1,0 +1,41 @@
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/material/assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/material/assets/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/material/assets/css/core.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/material/assets/css/components.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/material/assets/css/colors.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/material/assets/js/bootstrap-confirm-delete.css')}}" rel="stylesheet" type="text/css">
+    <style>
+        .checker input[type=checkbox], .choice input[type=radio] {
+            border: none;
+            background: 0 0;
+            display: -moz-inline-box;
+            /* display: inline-block; */
+            margin: 0;
+            vertical-align: top;
+            cursor: pointer;
+            position: absolute;
+            top: -1px;
+             left: 0px;
+             z-index: 2;
+             opacity: 1;
+        }
+
+        #datatable-table_wrapper{
+            padding: 15px !important;
+        }
+        .wysihtml5-toolbar {
+            margin: 0;
+            padding: 7px !important;
+            padding-top: 0;
+            display: block;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom: 0;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+site:
+    resource: "@SiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+service:
+    resource: "@ServiceBundle/Controller/"
+    type:     annotation
+    prefix:   /service
+
+common:
+    resource: "@CommonBundle/Controller/"
+    type:     annotation
+    prefix:   /common
+
+db:
+    resource: "@DBBundle/Controller/"
+    type:     annotation
+    prefix:   /db
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /secure
+
