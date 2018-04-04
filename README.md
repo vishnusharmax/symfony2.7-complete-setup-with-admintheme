@@ -12,7 +12,12 @@ What's inside?
 
 The Symfony Standard Edition is configured with the following defaults:
 
-  * An AppBundle you can use to start coding;
+  * An AdminBundle you can use to start coding for admin panel;
+  * An DBBundle you can use to start coding for Database;
+  * An ServiceBundle you can use to start coding for Rest Api;
+  * An CommonBundle you can use to start coding for Common helper;
+  * An SiteBundle you can use to start coding for your front end website;
+
 
   * Twig as the only configured template engine;
 
@@ -25,6 +30,13 @@ The Symfony Standard Edition is configured with the following defaults:
 It comes pre-configured with the following bundles:
 
   * **FrameworkBundle** - The core Symfony framework bundle
+  
+  * **VlabBundle** - Adds support for image uploadation
+  
+  * **meweskBundle/twig-excel-bundle** - Adds support for csv,pdf,excle file export.
+  
+  * **beberlei/DoctrineExtensions** - Adds support for doctrine custom query helper.
+
 
   * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
     template and routing annotation capability
