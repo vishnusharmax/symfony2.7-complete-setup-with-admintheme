@@ -8,6 +8,9 @@ For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
 
 There's no need to configure anything to run the application. Just execute this command to run the built-in web server and access the application in your browser at http://127.0.0.1:8000/secure/login
+![alt text](http://laxmiclothes.com/SymfonyDesktop.png)
+![alt text](http://laxmiclothes.com/SymfonyLogin.png)
+
 
 <pre>
 $ cd symfony2.7-complete-setup-with-admintheme/
