@@ -7,6 +7,17 @@ application that you can use as the skeleton for your new applications.
 For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
 
+There's no need to configure anything to run the application. Just execute this command to run the built-in web server and access the application in your browser at http://127.0.0.1:8000/secure/login
+
+$ cd symfony2.7-complete-setup-with-admintheme/
+$ php app/console doctrine:database:create
+$ php app/console doctrine:schema:update
+$ php app/console server:run
+
+Now Open database folder and goto your phpmyadmin and import database file that present in database folder
+
+Every thing is done now open url http://127.0.0.1:8000/secure/login
+
 What's inside?
 --------------
 
