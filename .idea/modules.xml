@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sfstub27.iml" filepath="$PROJECT_DIR$/.idea/sfstub27.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/symfony2.7-complete-setup-with-admintheme.iml" filepath="$PROJECT_DIR$/.idea/symfony2.7-complete-setup-with-admintheme.iml" />
     </modules>
   </component>
 </project>
