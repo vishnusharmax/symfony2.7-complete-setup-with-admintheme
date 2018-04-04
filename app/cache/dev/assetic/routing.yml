@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Users/vishnu/Symfonydumystub/symfony2.7-complete-setup-with-admintheme/app/config/routing_dev.yml
