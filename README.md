@@ -7,12 +7,29 @@ application that you can use as the skeleton for your new applications.
 For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
 
+There's no need to configure anything to run the application. Just execute this command to run the built-in web server and access the application in your browser at http://127.0.0.1:8000/secure/login
+
+<pre>
+$ cd symfony2.7-complete-setup-with-admintheme/
+$ php app/console doctrine:database:create
+$ php app/console doctrine:schema:update
+$ php app/console server:run</pre>
+
+Now Open database folder and goto your phpmyadmin and import database file that present in database folder
+
+Every thing is done now open url http://127.0.0.1:8000/secure/login
+
 What's inside?
 --------------
 
 The Symfony Standard Edition is configured with the following defaults:
 
-  * An AppBundle you can use to start coding;
+  * An AdminBundle you can use to start coding for admin panel;
+  * An DBBundle you can use to start coding for Database;
+  * An ServiceBundle you can use to start coding for Rest Api;
+  * An CommonBundle you can use to start coding for Common helper;
+  * An SiteBundle you can use to start coding for your front end website;
+
 
   * Twig as the only configured template engine;
 
@@ -25,6 +42,13 @@ The Symfony Standard Edition is configured with the following defaults:
 It comes pre-configured with the following bundles:
 
   * **FrameworkBundle** - The core Symfony framework bundle
+  
+  * **VlabBundle** - Adds support for image uploadation
+  
+  * **meweskBundle/twig-excel-bundle** - Adds support for csv,pdf,excle file export.
+  
+  * **beberlei/DoctrineExtensions** - Adds support for doctrine custom query helper.
+
 
   * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
     template and routing annotation capability
