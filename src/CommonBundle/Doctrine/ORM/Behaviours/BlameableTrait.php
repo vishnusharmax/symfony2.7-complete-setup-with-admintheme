@@ -1,15 +1,5 @@
 <?php
-/*
- * Trackometic Vehicle Tracking Platform
- *
- * This file is part of the WellCommerce package.
- *
- * (c) Deepak sinha <deepak@inflectica.com>
- *
- * This code is proprietary code of Trackometic.
- * Any Modification or Reproduction to the existing code
- * needs to have permission from the Inflectica.
- */
+
 
 namespace CommonBundle\Doctrine\ORM\Behaviours;
 
